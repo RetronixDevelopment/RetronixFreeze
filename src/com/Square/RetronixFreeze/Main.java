@@ -1,6 +1,8 @@
 package com.Square.RetronixFreeze;
 
 import commands.FreezeCommand;
+import events.LeaveEvent;
+import events.MoveEvent;
 import org.bukkit.ChatColor;
 import org.bukkit.entity.Player;
 import org.bukkit.plugin.java.JavaPlugin;
@@ -15,7 +17,7 @@ public class Main extends JavaPlugin {
     public void onEnable() {
         getServer().getConsoleSender().sendMessage(ChatColor.GREEN + "[RetronixFreeze] has been enabled");
         getCommand("freeze").setExecutor(new FreezeCommand(this));
-
+        getServer().getPluginManager().registerEvents(new MoveEvent(this), this);
     }
 
 
