@@ -21,7 +21,7 @@ public class LeaveEvent implements Listener {
         String pl = player.getDisplayName();
         if (plugin.frozen_list.contains(player)) {
             for (Player p : Bukkit.getOnlinePlayers()) {
-                if (p.hasPermission("retronixcore.freeze")) {
+                if (p.hasPermission("retronixfreeze.freeze")) {
                     p.sendMessage("\n\n\n\n\n\n\n§c§l(!) §c§l(!) §c " + pl + " logged out whilst §lfrozen.\n\n\n\n\n\n\n");
                 }
             }

@@ -16,6 +16,7 @@ public class Main extends JavaPlugin {
     @Override
     public void onEnable() {
         getServer().getConsoleSender().sendMessage(ChatColor.GREEN + "[RetronixFreeze] has been enabled");
+        getServer().getConsoleSender().sendMessage(ChatColor.DARK_GREEN + "[RF] Debug mode has been enabled.");
         getCommand("freeze").setExecutor(new FreezeCommand(this));
         getServer().getPluginManager().registerEvents(new MoveEvent(this), this);
         getServer().getPluginManager().registerEvents(new LeaveEvent(this), this);
