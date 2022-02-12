@@ -18,6 +18,7 @@ public class Main extends JavaPlugin {
         getServer().getConsoleSender().sendMessage(ChatColor.GREEN + "[RetronixFreeze] has been enabled");
         getCommand("freeze").setExecutor(new FreezeCommand(this));
         getServer().getPluginManager().registerEvents(new MoveEvent(this), this);
+        getServer().getPluginManager().registerEvents(new LeaveEvent(this), this);
     }
 
 
