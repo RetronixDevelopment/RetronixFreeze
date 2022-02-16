@@ -20,6 +20,7 @@ public class Main extends JavaPlugin {
         getCommand("freeze").setExecutor(new FreezeCommand(this));
         getServer().getPluginManager().registerEvents(new MoveEvent(this), this);
         getServer().getPluginManager().registerEvents(new LeaveEvent(this), this);
+        // I JUST GOT GITHUB WORKING FINALLY
     }
 
 
